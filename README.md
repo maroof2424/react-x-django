@@ -101,13 +101,13 @@
 
 ## 🏁 Final Project: **"ShopEase – Product Manager App"**
 
-✅ Django REST API
-✅ React Frontend (Axios, Routing, Auth)
-✅ JWT Authentication
-✅ Image Uploads
-✅ Protected Routes (Admin/User)
-✅ Deployed Live (Railway + Vercel)
-✅ GitHub & Resume Ready 💼
+✅ Django REST API<br>
+✅ React Frontend (Axios, Routing, Auth)<br>
+✅ JWT Authentication<br>
+✅ Image Uploads<br>
+✅ Protected Routes (Admin/User)<br>
+✅ Deployed Live (Railway + Vercel)<br>
+✅ GitHub & Resume Ready 💼<br>
 
 ---
 
