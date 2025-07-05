@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #quote-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    #quote {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #author {
+      color: #777;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      padding: 0.7rem 1.5rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="quote-box">
+    <div id="quote">Click the button to load a quote!</div>
+    <div id="author"></div>
+    <button onclick="getQuote()">Get New Quote</button>
+  </div>
+
+  <script>
+    async function getQuote() {
+      const quoteEl = document.getElementById("quote");
+      const authorEl = document.getElementById("author");
+
+      quoteEl.innerText = "Loading...";
+      authorEl.innerText = "";
+
+      try {
+        const res = await fetch("https://api.quotable.io/random");
+        const data = await res.json();
+        quoteEl.innerText = `"${data.content}"`;
+        authorEl.innerText = `— ${data.author}`;
+      } catch (error) {
+        quoteEl.innerText = "Failed to load quote.";
+        console.error("Error fetching quote:", error);
+      }
+    }
+  </script>
+
+</body>
+</html>
