@@ -15,7 +15,7 @@
 | **Jul 4 (Fri)** | Git & GitHub Basics                         |
 | **Jul 5 (Sat)** | Django Setup: Project/App, Views, URLs      |
 | **Jul 6 (Sun)** | Templates, Static Files, Base Layout        |
-| **Jul 7 (Mon)** | Django Models, ORM, Admin, CRUD             |
+| **Jul 7 (Mon)** | Django Models, ORM, Admin                   |
 
 ---
 
